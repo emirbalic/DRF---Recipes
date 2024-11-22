@@ -1,0 +1,222 @@
+[
+    {
+        "model": "recipes.tag",
+        "pk": 1,
+        "fields": {
+            "name": "Vegetarian"
+        }
+    },
+    {
+        "model": "recipes.tag",
+        "pk": 2,
+        "fields": {
+            "name": "Vegan"
+        }
+    },
+    {
+        "model": "recipes.tag",
+        "pk": 3,
+        "fields": {
+            "name": "Gluten-Free"
+        }
+    },
+    {
+        "model": "recipes.tag",
+        "pk": 4,
+        "fields": {
+            "name": "Low-Carb"
+        }
+    },
+    {
+        "model": "recipes.tag",
+        "pk": 5,
+        "fields": {
+            "name": "High-Protein"
+        }
+    },
+    {
+        "model": "recipes.category",
+        "pk": 1,
+        "fields": {
+            "name": "Main Course"
+        }
+    },
+    {
+        "model": "recipes.category",
+        "pk": 2,
+        "fields": {
+            "name": "Desserts"
+        }
+    },
+    {
+        "model": "recipes.category",
+        "pk": 3,
+        "fields": {
+            "name": "Appetizers"
+        }
+    },
+    {
+        "model": "recipes.category",
+        "pk": 4,
+        "fields": {
+            "name": "Snacks"
+        }
+    },
+    {
+        "model": "recipes.category",
+        "pk": 5,
+        "fields": {
+            "name": "Beverages"
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 1,
+        "fields": {
+            "title": "Vegetable Stir Fry",
+            "description": "A healthy and colorful vegetable stir fry.",
+            "ingredients": "Carrot, Bell Pepper, Broccoli, Soy Sauce",
+            "instructions": "Stir fry the vegetables in a hot pan with soy sauce.",
+            "category": 1,
+            "tags": [1, 3],
+            "created_by": 1,
+            "created_at": "2024-11-22T00:00:00Z",
+            "updated_at": "2024-11-22T00:00:00Z"
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 2,
+        "fields": {
+            "title": "Tofu Scramble",
+            "description": "A plant-based alternative to scrambled eggs.",
+            "ingredients": "Tofu, Spinach, Onion, Turmeric",
+            "instructions": "Cook tofu with vegetables and spices.",
+            "category": 1,
+            "tags": [2, 4],
+            "created_by": 1,
+            "created_at": "2024-11-22T00:00:00Z",
+            "updated_at": "2024-11-22T00:00:00Z"
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 3,
+        "fields": {
+            "title": "Chocolate Cake",
+            "description": "A rich and moist chocolate cake.",
+            "ingredients": "Flour, Cocoa Powder, Sugar, Eggs, Butter",
+            "instructions": "Mix all ingredients and bake.",
+            "category": 2,
+            "tags": [1],
+            "created_by": 1,
+            "created_at": "2024-11-22T00:00:00Z",
+            "updated_at": "2024-11-22T00:00:00Z"
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 4,
+        "fields": {
+            "title": "Guacamole",
+            "description": "A delicious avocado dip.",
+            "ingredients": "Avocado, Lime, Tomato, Onion",
+            "instructions": "Mash avocado and mix with other ingredients.",
+            "category": 3,
+            "tags": [5],
+            "created_by": 1,
+            "created_at": "2024-11-22T00:00:00Z",
+            "updated_at": "2024-11-22T00:00:00Z"
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 5,
+        "fields": {
+            "title": "Chia Pudding",
+            "description": "A simple and nutritious chia pudding.",
+            "ingredients": "Chia Seeds, Almond Milk, Honey",
+            "instructions": "Mix and refrigerate overnight.",
+            "category": 2,
+            "tags": [3],
+            "created_by": 1,
+            "created_at": "2024-11-22T00:00:00Z",
+            "updated_at": "2024-11-22T00:00:00Z"
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 6,
+        "fields": {
+            "title": "Quinoa Salad",
+            "description": "A healthy quinoa salad with vegetables.",
+            "ingredients": "Quinoa, Cucumber, Tomato, Olive Oil, Lemon",
+            "instructions": "Cook quinoa and mix with fresh veggies.",
+            "category": 1,
+            "tags": [4],
+            "created_by": 1,
+            "created_at": "2024-11-22T00:00:00Z",
+            "updated_at": "2024-11-22T00:00:00Z"
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 7,
+        "fields": {
+            "title": "Pasta Primavera",
+            "description": "A colorful pasta dish with fresh vegetables.",
+            "ingredients": "Pasta, Zucchini, Bell Pepper, Garlic, Olive Oil",
+            "instructions": "Cook pasta and toss with sautéed vegetables.",
+            "category": 1,
+            "tags": [1, 4],
+            "created_by": 1,
+            "created_at": "2024-11-22T00:00:00Z",
+            "updated_at": "2024-11-22T00:00:00Z"
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 8,
+        "fields": {
+            "title": "Mango Smoothie",
+            "description": "A refreshing and tropical mango smoothie.",
+            "ingredients": "Mango, Almond Milk, Ice, Honey",
+            "instructions": "Blend all ingredients until smooth.",
+            "category": 5,
+            "tags": [2, 5],
+            "created_by": 1,
+            "created_at": "2024-11-22T00:00:00Z",
+            "updated_at": "2024-11-22T00:00:00Z"
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 9,
+        "fields": {
+            "title": "Avocado Toast",
+            "description": "A quick and healthy breakfast option.",
+            "ingredients": "Avocado, Bread, Olive Oil, Salt, Pepper",
+            "instructions": "Toast bread and top with mashed avocado.",
+            "category": 4,
+            "tags": [5],
+            "created_by": 1,
+            "created_at": "2024-11-22T00:00:00Z",
+            "updated_at": "2024-11-22T00:00:00Z"
+        }
+    },
+    {
+        "model": "recipes.recipe",
+        "pk": 10,
+        "fields": {
+            "title": "Lentil Soup",
+            "description": "A hearty and filling lentil soup.",
+            "ingredients": "Lentils, Onion, Carrot, Garlic, Broth",
+            "instructions": "Cook lentils with vegetables in broth.",
+            "category": 1,
+            "tags": [1, 3],
+            "created_by": 1,
+            "created_at": "2024-11-22T00:00:00Z",
+            "updated_at": "2024-11-22T00:00:00Z"
+        }
+    }
+]

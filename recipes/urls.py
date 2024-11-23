@@ -5,11 +5,15 @@ from .views import CategoryViewSet, RecipeViewSet, TagViewSet
 
 router = DefaultRouter()
 router.register(r'recipes', RecipeViewSet, basename='recipe')
-# router.register(r'recipes', CategoryViewSet, basename='recipe')
 router.register(r'categories', CategoryViewSet)
 router.register(r'tags', TagViewSet)
 
-urlpatterns = router.urls
+from django.urls import path
+from .views import UserRegistrationView
+urlpatterns = [
+    path('users/register/', UserRegistrationView.as_view(), name='user_registration'),  # Add registration endpoint
+]
+urlpatterns += router.urls
 
 
 # urlpatterns = [

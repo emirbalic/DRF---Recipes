@@ -7,11 +7,27 @@ from .permissions import IsOwnerOrReadOnly
 
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
+from rest_framework.filters import SearchFilter
+from django_filters.rest_framework import DjangoFilterBackend
+
+from .pagination import CustomPagination
+
 class RecipeViewSet(ModelViewSet):
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
+    pagination_class = CustomPagination  # Apply the custom pagination class
     # permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
     # Add permissions
+
+    # Enable search and filtering
+    filter_backends = [SearchFilter, DjangoFilterBackend]
+
+    # Search by title or ingredients
+    search_fields = ['title', 'ingredients']
+
+    # Filters for category and tags
+    filterset_fields = ['category', 'tags']
+
     permission_classes = [IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
 
     def perform_create(self, serializer):
@@ -27,6 +43,7 @@ from .serializers import CategorySerializer
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+    pagination_class = None
 
 
 # views.py

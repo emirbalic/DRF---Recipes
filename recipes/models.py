@@ -26,3 +26,6 @@ class Recipe(models.Model):
 
     def __str__(self):
         return self.title
+    
+from django_filters import rest_framework as filters
+

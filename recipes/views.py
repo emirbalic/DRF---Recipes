@@ -5,13 +5,17 @@ from rest_framework.permissions import IsAuthenticated
 
 from .permissions import IsOwnerOrReadOnly
 
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+
 class RecipeViewSet(ModelViewSet):
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
     # permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
+    # Add permissions
+    permission_classes = [IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
 
-    # def perform_create(self, serializer):
-    #     serializer.save(created_by=self.request.user)
+    def perform_create(self, serializer):
+        serializer.save(created_by=self.request.user)
 
 
 
